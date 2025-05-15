@@ -2,21 +2,16 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        System.out.print("숫자를 입력하세요: ");
-        int maxNumber = scanner.nextInt();
+        while (true) {
+            System.out.println("1부터 100 사이의 숫자를 입력하시오:");
+            int a = sc.nextInt();
 
-        int sum = 0;
-
-        for (int i = 1; i <= maxNumber; i++) {
-            if (i % 2 != 0) {
-                sum += i;
+            if (a >= 1 && a <= 100) {
+                System.out.println("입력 완료! 프로그램을 종료합니다.");
+                break;
             }
         }
-
-        System.out.println("홀수의 합: " + sum);
-
-        scanner.close();
     }
 }
